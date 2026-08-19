@@ -1,1 +1,43 @@
+Network Scanning with Zenmap
+Background
+Zenmap is the official GUI version of Nmap, a free and open source security scanner used by cybersecurity professionals and ethical hackers. It runs on multiple platforms (Linux, Windows, Mac OS X, BSD) and makes Nmap easier for beginners while offering advanced features for experienced users. Frequently used scans can be saved as profiles for repeated execution.
+Task 2 — Local IP Address & LAN Subnet
+Command Executed: ipconfig /all
+Output Result
+Ethernet adapter Ethernet:
+1.	IPv4 Address. . . . . . . . . . . : 192.168.100.5 
+2.	Subnet Mask . . . . . . . . . . . : 255.255.255.0
+3.	Default Gateway . . . . . . . . . : 192.168.100.1
+4.	Physical Address. . . . . . . . . : E4-B9-7A-78-6B-C5
+Why This Matters
+1.	Network Visibility → Identifying your IP and subnet defines the scope of your LAN scan.
+2.	Attack Surface Mapping → Knowing the subnet (/24) allows scanning all 254 possible hosts.
+3.	Defensive Awareness → Helps administrators monitor devices and detect unauthorized connections.
+Task 3 & 4 — Live Hosts in Subnet
+Nmap done: 256 IP addresses (5 hosts up) scanned in 18.19 seconds
+Live Hosts Found
+1.	192.168.100.1 → Router (Huawei Technologies)
+2.	192.168.100.3 → Windows PC (Intel Corporate)
+3.	192.168.100.5 → Your PC (Intel Ethernet Adapter)
+4.	192.168.100.6 → Host running HTTP/Nessus services
+5.	192.168.100.7 → Additional LAN device
+Task 6 — MAC Addresses of Live Hosts
+Output (Relevant Section)
+From the scan results, the following MAC addresses and vendor information were identified:
+•	192.168.100.1 → C8:3A:35:XX:XX:XX (Huawei Technologies)
+•	192.168.100.3 → E4-B9-7A:XX:XX:XX (Intel Corporate)
+•	192.168.100.5 → E4-B9-7A:XX:XX:XX (Intel Ethernet Adapter – your PC)
+•	192.168.100.6 → 00:0C:29:XX:XX:XX (VMware/Virtualized host)
+•	192.168.100.7 → F4:8E:38:XX:XX:XX (LAN device vendor)
+(Note: Some octets are masked with XX for privacy in documentation.)
+Why This Matters
+1.	Network Visibility → Confirms which devices are active in the subnet.
+2.	Attack Surface Mapping → Each live host represents a potential entry point for attackers.
+3.	Defensive Awareness → Administrators can monitor these hosts and secure exposed services.
+🎓 Learning Outcome
+This project demonstrates how Zenmap/Nmap can identify live hosts, IP addresses, and MAC addresses in a subnet. In this case, 5 hosts were active in the 192.168.100.0/24 range. This provides the foundation for deeper analysis of open ports, services, and vulnerabilities in subsequent tasks.
+Author: Michael Tetteh 
+Coursework: Cybersecurity — Network Scanning with Zenmap
+
+
 
