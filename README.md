@@ -15,10 +15,6 @@ This project demonstrates how to use Zenmap to discover live hosts, IP addresses
 6. Identify MAC addresses of live hosts  
 7. Save output topology in PDF format  
 
-## 📑 Contents
-- [Zenmap Report](reports/10-Zenmap.md)  
-- [Raw Output Log](outputs/zenmap.txt)  
-
 ## 🎓 Learning Outcome
 This project demonstrates how **Zenmap/Nmap** can be used to:
 - ✅ Identify all devices connected to a LAN  
